@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Adopt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/main.js" type="text/javascript" rel="stylesheet"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Navigation Bar inspired by w3schools.com Bootstrap NavBar reference-->
+  <!-- Navigation Bar inspired by w3schools.com Bootstrap reference
+  The class navbar navbar-default adds a default navigation bar the 
+  top of the page that is by default responsive-->
+  <nav class="navbar navbar-default">
+    <!-- container-fluid class spans the full width of the viewport -->
+    <div class="container-fluid"> 
+      <!-- navbar-brand is for the brand or company's name and it 
+      shows up on the left corner of the navigation bar-->
+      <div class="container-header">
+        <a class="navbar-brand">Rebecca's Rattie Rescue</a>
+      </div>
+      <!-- Create menu options that will be in the navigation bar -->
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="adopt">Adopt</a></li>
+        <li><a href="volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Form inspired by w3schools.com Bootstrap Form reference-->
+  <br>
+  <h2>Adoption Form</h2>
+  <br>
+  <p>Want to adopt rats? Fill out this form and we will get back to you!</p>
+  <br>
+  <form action="adoptformreceived" method="POST">
+      <!-- The form-group class div wraps the label and form controls, which is 
+      important for spacing purposes. The row class is used in the grid system for
+      bootstrap and gives this div it's own row-->
+      <div class="form-group row">
+          <!-- the col-xs-3 is a class in Boostrap that is similar to row but handles
+          columns instead. Each width is divided into 12. So this takes up 3 out of 12 
+          columns. -->
+          <div class="col-xs-3">
+            <label for="firstName">First Name</label>
+            <!-- the form-control class makes the inputs responsive. "required" 
+            makes it so that the user needs to answer these inputs before submitting.-->
+            <input id="firstName" name="firstName" class="form-control" type="text" required>
+          </div>
+          <div class="col-xs-3">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" class="form-control" type="text">
+          </div>
+      </div>
+      <div class="form-group row">
+          <div class="col-xs-4">
+            <label for="email">Email</label>
+            <input id="email" name="email" class="form-control" type="email" required>
+          </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-xs-3">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" class="form-control" type="tel">
+        </div>
+      </div>
+      <div class="form-group row">
+          <div class="col-xs-3 checkbox">
+              <label for="ageCheck"><input id="ageCheck" type="checkbox" name="ageCheck" value="yes">I am at least 18 years old</label>
+          </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-xs-3 checkbox">
+            <label for="hasOwned"><input id="hasOwned" type="checkbox" name="hasOwned" value="yes">I have owned pet rats in the past.</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-6">
+            <!-- I dynamically populate these options depending on what is in my ratties.json file, 
+            that way it is not hard coded in-->
+            <label for="pickRat">Interested in any particular rats?<br>(Hold down shift to pick more than one)</label>
+            <select id="pickRat" name="pickRat" class="form-control" multiple>
+              {{#each ratties}}
+                <option value="{{this.name}}">{{this.name}}</option>
+              {{/each}}
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-6">
+          <label for="comment">Any questions or comments?</label>
+          <textarea id="comment" name="comment" class="form-control" rows="6"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</div>
+
+<footer class="container-fluid text-center">
+    <p>Rebecca’s Rattie Rescue<br>
+    101 Fake Street<br>
+    Fakecity, Massachusetts 55555<br>
+    Phone: 555-555-5555</br>
+    Email: info@rebeccasrattierescue.org</p>
+</footer>
+
+</body>
+</html>

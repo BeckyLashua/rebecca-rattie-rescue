@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rebecca's Rattie Rescue</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/main.js" type="text/javascript" rel="stylesheet"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+<!-- container class is for responsive fixed width container on the page-->
+<div class="container">
+  <!-- Navigation Bar inspired by w3schools.com Bootstrap reference
+  The class navbar navbar-default adds a default navigation bar the 
+  top of the page that is by default responsive-->
+  <nav class="navbar navbar-default">
+    <!-- container-fluid class spans the full width of the viewport -->
+    <div class="container-fluid"> 
+      <!-- navbar-brand is for the brand or company's name and it 
+      shows up on the left corner of the navigation bar-->
+      <div class="container-header">
+        <a class="navbar-brand">Rebecca's Rattie Rescue</a>
+      </div>
+      <!-- Create menu options that will be in the navigation bar -->
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="adopt">Adopt</a></li>
+        <li><a href="volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<br>
+<!-- Carousel inspired by w3schools.com Bootstrap reference example -->
+<div class="container-fluid">
+  <h4 class="meetRats">Meet Our Ratties!</h4>
+  <h5 class="meetRats">Click on their photo to learn more.</h5>
+  <!-- data-ride="carousel" tells Boostrap to start the animation
+    The carousel class tells Bootstrap that this div contains a carousel.
+    The slide class gives us the animation effect we want in our carousel-->  
+  <div id="ratCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <!-- data-target points to the ratCoursel carousel element.
+        data-slide-to is used to specify which slide to when clicking 
+        on the dot on the bottom.-->
+      {{#each ratties}}
+        <li data-target="#ratCarousel" data-slide-to="{{@index}}"></li>
+      {{/each}}
+    </ol>
+
+  <!-- This will dynamically be populated with the information in the JSON file.
+    carousel-inner is a class that wraps the carousel slides-->
+  <div class="carousel-inner">
+    {{#each ratties}}
+      {{#if this.active}}
+      <!-- First picture is given the active class, which makes the carousel visible, 
+      and each item is added to the carousel-->
+      <div class="item active">
+      {{else}}
+      <div class="item">
+      {{/if}}
+        <!-- data-toggle="modal" opens the modal window when we click on the rat
+          data-target-#ratModel points to the id of the modal-->
+        <img id={{this.name}} src="{{this.imgUrl}}" alt="{{this.imgAlt}}" data-toggle="modal" data-target="#ratModal" class="ratPic"> 
+        <!-- carousel-caption puts a caption on the slide -->
+        <div class="carousel-caption">
+          <h4>{{this.name}}</h4>
+          <span>Photo courtesy of {{this.imgCredit}}</span>
+        </div>
+      </div>
+    {{/each}}
+    </div>
+  
+
+  <!-- Left and right control buttons --> 
+    <!--left carousel-control puts a control button on the left of the carousel,
+    data-slide accepts the keywords "prev" and "next". In this case we want 
+    to move to the previous picture so we set it to "prev".-->
+  <a class="left carousel-control" href="#ratCarousel" data-slide="prev">
+    <!-- glyphicon glyphicon-chevron-left uses a specific style of left arrow-->
+    <span class="glyphicon glyphicon-chevron-left"></span>
+   <!-- class="sr-only" means this shows up for screen readers only
+      so if somebody is using a screen reader, it will commnunicate 
+      "Previous" to them-->
+    <span class="sr-only">Previous</span> 
+  </a>
+    <!--right carousel-control puts a control button on the right of the carousel
+    data-slide accepts the keywords "prev" and "next". In this case we want 
+    to move to the next picture so we set it to "next".-->
+  <a class="right carousel-control" href="#ratCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <!-- class="sr-only" means this shows up for screen readers only
+      so if somebody is using a screen reader, it will commnunicate 
+      "Next" to them-->
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+</div>  
+</div>
+ 
+
+
+<!-- Scrollbox inspired by getboostrap.com modal documentation-->
+<!-- modal class identifies this div as a modal. The fade class adds a transition
+  effect that makes the modal fade in and out. role="dialog", aria-hidden="true", 
+  aria-labelled, and tabindex="-1" all make the modal more accessible for people who 
+  use screen readers.-->
+<div id="ratModal" class="modal fade" aria-hidden="true" tabindex="-1" role="dialog" aria-labelled="ratTitle">
+    <!-- model-dialog class sets the proper width and margin for the modal
+    modal-sm makes the size of the modal small. role="document" is used because
+    for accessibility reasons, all elements with the .modal-dialog class require a 
+    role attribute set to document. modal-dialog-scrollable makes it scrollable. -->
+    <div class="modal-dialog modal-sm modal-dialog-scrollable" role="document">
+        <!-- this will contain the modal content and styles it -->
+        <div class="modal-content">
+            <!-- modal-header class defines the style for the header of the modal -->
+            <div class="modal-header">
+                <!-- Here a title for the header is set. The modal-title class styles the 
+                header section with a proper line-height-->
+                <h3 id="ratTitle" class="modal-title"><!--Will be rat's name --></h3>
+                <!--The following is for purposes of accessibility with screen readers. 
+                aria-label="Close" adds accessibility, the "close" class styles the close button, 
+                data-dismiss is set to modal which means the modal will close when
+                the button is clicked  -->
+                <button type="button" aria-label="Close" class="close" data-dismiss="modal">
+                    <!-- aria-hidden="true" means that this is not exposed to accessibility API-->
+                    <span aria-hidden="true">&times;</span>
+                </button> 
+            </div>
+            <!-- modal-body class used here to define the body which is where we put our info-->
+            <div id="ratModalBody" class="modal-body">
+                
+            </div>
+            <!-- modal-footer class defines a footer for the modal and styles it-->
+            <div class="modal-footer">
+                <!-- data-dismiss attribute is set to "modal" which will close the modal
+                when the button is clicked on. -->
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <p>Rebecca’s Rattie Rescue<br>
+  101 Fake Street<br>
+  Fakecity, Massachusetts 55555<br>
+  Phone: 555-555-5555</br>
+  Email: info@rebeccasrattierescue.org</p>
+</footer>
+
+</body>
+</html>

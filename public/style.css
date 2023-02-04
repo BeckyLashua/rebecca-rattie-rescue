@@ -1,0 +1,59 @@
+.item img {
+    width:100%;
+}
+
+.navbar {
+    background-color: #d1e0e0;
+    padding: 20px;
+}
+
+footer {
+    background-color: #d1e0e0;
+    color: #333;
+    padding: 20px;
+}
+
+form {
+    padding: 20px;
+}
+
+#aboutUsImg {
+    padding: 50px;
+}
+
+#operationInfo {
+    text-align: left;
+}
+
+#operationInfo ul {
+    list-style-type: none;
+}
+
+#volunteerList {
+    list-style-type: none;
+}
+
+.scrollBox {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    border: green solid 1px;
+    overflow: scroll;
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.meetRats {
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333;
+}
+
+#ratModalBody {
+    font-size: 1.5em;
+}

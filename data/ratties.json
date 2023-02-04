@@ -1,0 +1,76 @@
+{"ratties":
+	[
+		{
+			"name": "Prishe",
+			"imgUrl": "images/Prishe.jpg",
+			"imgCredit": "https://unsplash.com/",
+			"imgAlt": "rat looking around curiously",
+			"age": 19,
+			"sex": "female",
+			"favoriteTreat": "Grapes",
+			"description": "Prishe is as energetic as they come! She will spend hours a day running on her favorite rat wheel. So if you need a training partner for your next marathon, she's the perfect fit!",
+			"active": 1
+		},
+		{
+			"id": 1,
+			"name": "Crinkles",
+			"imgUrl": "images/Crinkles.jpg",
+			"imgCredit": "https://unsplash.com/",
+			"imgAlt": "rat in a coconut",
+			"age": 20,
+			"sex": "female",
+			"favoriteTreat": "Yogurt Drops",
+			"description": "Crinklles is the climber of the bunch. You'll see her climbing and jumping throughout the cage like a ninja warrior! She is loads of fun. Just make sure you keep track of your socks, because she likes to steal them for her nest.",
+			"active": 0
+		},
+		{
+			"id": 2,
+			"name": "Omar",
+			"imgUrl": "images/Omar.jpg",
+			"imgCredit": "https://unsplash.com/",
+			"imgAlt": "rat in a blanket",
+			"age": 15,
+			"sex": "male",
+			"favoriteTreat": "Cheetos",
+			"description": "Omar is the curious one of the bunch. He loves sniffing around to find hidden snacks and toys both inside and outside of the cage. When outside the cage, you will find him exploring ever nook and cranny, so make sure to hide those wires!",
+			"active": 0
+		},
+		{
+			"id": 3,
+			"name": "Putt-Putt",
+			"imgUrl": "images/puttputt.jpg",
+			"imgCredit": "https://unsplash.com/",
+			"imgAlt": "a rat looking at camera",
+			"age": 12,
+			"sex": "male",
+			"favoriteTreat": "Cheerios",
+			"description": "Putt-Putt is the laid back and friendly one of the bunch. If you are the type of person who enjoys relaxing and chilling out with a friend, Putt-Putt is your guy! Don't forget the cheerios!",
+			"active": 0
+		},
+		{
+			"id": 4,
+			"name": "Higgens",
+			"imgUrl": "images/Higgens.jpg",
+			"imgAlt": "baby rat standing still",
+			"imgCredit": "https://unsplash.com/",
+			"age": 6,
+			"sex": "male",
+			"favoriteTreat": "Carrots",
+			"description": "Higgens is the baby of the bunch. Just like any youngster, he is energetic and eager to learn. He loves people, and does especially well with kids and elderly people. Who knows? Maybe Grandpa is looking for a pet?",
+			"active": 0
+		},
+		{
+			"id": 5,
+			"name": "Bismarck",
+			"imgUrl": "images/Bismarck.jpg",
+			"imgCredit": "https://unsplash.com/",
+			"imgAlt": "furless rat standing still",
+			"age": 26,
+			"sex": "male",
+			"favoriteTreat": "British Tea Biscuits",
+			"description": "Bismarck is the oldest one of the bunch, and carries himself in quite the dignified manner. He likes to lay back in his hammock and relax, and if you happen to have some biscuits, he will hang out with you too!",
+			"active": 0
+		}
+	]
+
+}
