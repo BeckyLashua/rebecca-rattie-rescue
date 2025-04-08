@@ -52,22 +52,25 @@ http://localhost:3000
 ---
 
 
-#### 🎓 Educational Purpose
+## 🎓 Educational Purpose
 This project was created as part of a personal portfolio to demonstrate skills in web development, user-centered design, and responsive layout. All data and adoption listings are fictional.
 
 ---
 
 
-#### 📬 Contact
+## 📬 Contact
+
+Thank you for visiting!  
+Feel free to connect with me or explore more of my work:
 
 **Rebecca Lashua**  
 📧 [beckylashua@gmail.com](mailto:beckylashua@gmail.com)  
 🌐 [Portfolio Website](https://beckylashua.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/rebecca-lashua-a75096231/)
+🐙 [GitHub](https://github.com/BeckyLashua)
 
 
 ---
 
 
-<p align="center"><strong>🐁 Thanks for Visiting!</strong></p>
 <p align="center"><em>"Every rat deserves a loving home."</em></p>
