@@ -7,8 +7,8 @@ A fictional adoption website for "Rebecca's Rattie Rescue," designed to promote 
 ### 👩‍💻 Author
 
 **Rebecca Lashua**  
-📧 [beckylashua@gmail.com](mailto:beckylashua@gmail.com)  
-🌐 [beckylashua.com](https://beckylashua.com)  
+🌐 [beckylashua.com](https://beckylashua.com)   
+📧 [beckylashua@gmail.com](mailto:beckylashua@gmail.com)     
 🔗 [LinkedIn](https://www.linkedin.com/in/rebecca-lashua-a75096231/)  
 🐙 [GitHub](https://github.com/BeckyLashua)
 
