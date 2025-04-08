@@ -4,6 +4,16 @@ A fictional adoption website for "Rebecca's Rattie Rescue," designed to promote 
 
 ---
 
+### 👩‍💻 Author
+
+**Rebecca Lashua**  
+📧 [beckylashua@gmail.com](mailto:beckylashua@gmail.com)  
+🌐 [beckylashua.com](https://beckylashua.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/rebecca-lashua-a75096231/)  
+🐙 [GitHub](https://github.com/BeckyLashua)
+
+---
+
 ## ✨ Features
 
 - 🐾 **Adoption Listings** – View adoptable rats with photos, names, and bios  
@@ -57,20 +67,5 @@ This project was created as part of a personal portfolio to demonstrate skills i
 
 ---
 
-
-## 📬 Contact
-
-Thank you for visiting!  
-Feel free to connect with me or explore more of my work:
-
-**Rebecca Lashua**  
-📧 [beckylashua@gmail.com](mailto:beckylashua@gmail.com)  
-🌐 [Portfolio Website](https://beckylashua.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/rebecca-lashua-a75096231/)
-🐙 [GitHub](https://github.com/BeckyLashua)
-
-
----
-
-
+<p align="center"><strong>Thanks for visiting!</strong></p>
 <p align="center"><em>"Every rat deserves a loving home."</em></p>
